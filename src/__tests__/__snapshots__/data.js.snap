@@ -255,7 +255,7 @@ exports[`Data Table View renders 1`] = `
           aria-sort={null}
           className="MuiTableCell-root MuiTableCell-body"
         >
-          2016 Sep 20 13:27:57
+          2016 Sep 20 20:27:57
         </td>
         <td
           aria-sort={null}
@@ -407,7 +407,7 @@ exports[`Data Table View renders 1`] = `
           aria-sort={null}
           className="MuiTableCell-root MuiTableCell-body"
         >
-          2018 Jun 28 15:49:35
+          2018 Jun 28 22:49:35
         </td>
         <td
           aria-sort={null}
@@ -559,7 +559,7 @@ exports[`Data Table View renders 1`] = `
           aria-sort={null}
           className="MuiTableCell-root MuiTableCell-body"
         >
-          2017 Feb 07 17:03:33
+          2017 Feb 08 00:03:33
         </td>
         <td
           aria-sort={null}
@@ -711,7 +711,7 @@ exports[`Data Table View renders 1`] = `
           aria-sort={null}
           className="MuiTableCell-root MuiTableCell-body"
         >
-          2014 Oct 30 13:23:43
+          2014 Oct 30 20:23:43
         </td>
         <td
           aria-sort={null}
