@@ -93,9 +93,9 @@ export function logSessionCookie(req, _, next) {
  * Middleware to log the session info.
  */
 export function logSessionInfo(req, _, next) {
-    console.log(`DEBUG: maxAge: ${req.session.cookie.maxAge}`);
-    console.log(`DEBUG: originalMaxAge: ${req.session.cookie.originalMaxAge}`);
-    console.log(req.session);
+    // console.log(`DEBUG: maxAge: ${req.session.cookie.maxAge}`);
+    // console.log(`DEBUG: originalMaxAge: ${req.session.cookie.originalMaxAge}`);
+    // console.log(req.session);
     next();
 }
 
