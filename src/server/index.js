@@ -60,6 +60,19 @@ function buildNavigationRouteRegexp() {
 // Configure the Keycloak client.
 const keycloakClient = authn.getKeycloakClient();
 
+// Configure the Unleash SDK
+const unleash = require("unleash-client");
+
+unleash.initialize({
+    url: "http://localhost:4242/api/",
+    appName: "de2",
+    environment: process.env.APP_ENV,
+    customHeaders: {
+        Authorization:
+            "3238e92da2351305a75d87f0a043e13026e27b27f9d15c267adfd437aabaaf78",
+    },
+});
+
 app.prepare()
 
     .then(() => {
@@ -144,6 +157,21 @@ app.prepare()
 
         logger.info("mapping / to /dashboard in the app");
         server.use("/", compression());
+
+        server.use((req, res, next) => {
+            if (unleash.isEnabled("DE2_Maintenance")) {
+                console.log(
+                    "000000000000000000000000000000000 MAINTENANCE ENABLED 000000000000000000000000000000000"
+                );
+                return app.render(req, res, "/maintenance", undefined);
+            } else {
+                console.log(
+                    "000000000000000000000000000000000 MAINTENANCE DISABLED 000000000000000000000000000000000"
+                );
+                next();
+            }
+        });
+
         server.get("/", (req, res) => {
             app.render(req, res, "/dashboard", undefined);
         });
